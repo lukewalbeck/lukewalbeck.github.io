@@ -1,5 +1,6 @@
 import React from 'react';
 import API from './utils/API';
+import {Card, Button} from 'react-bootstrap';
 class Recipes extends React.Component {
     constructor(props){
         super(props);
@@ -36,22 +37,22 @@ class Recipe extends React.Component {
     render() {
         const { item } = this.state;
         return(
-            <div>
-                <h2>Title: {item.title}</h2>
-                <p>
-                    Description: {item.description}
-                </p>
-                <p>
-                    Image:<br></br>
-                    <img src={item.image} alt="loading" width="20%"></img>
-                </p>
-            </div>         
+            <Card style={{ width: '18rem', margin: '50px' }}>
+                <Card.Img variant="top" src={item.image} />
+                <Card.Body>
+                    <Card.Title>{item.title}</Card.Title>
+                    <Card.Text>
+                    {item.description}
+                    </Card.Text>
+                    <Button variant="primary">Go somewhere</Button>
+                </Card.Body>
+            </Card>        
         );       
     }
 }
 
 const flexStyle = {
-    display: 'flex'
+    display: 'flex',
 };
 
 

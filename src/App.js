@@ -1,10 +1,14 @@
 import React from 'react';
 import Recipes from './Recipes';
+import Header from './components/Header';
 import './App.css';
 
 function App() {
   return (
-    <Recipes apiCall="/recipes/"/>
+    <div class="App">
+      <Header></Header>
+      <Recipes apiCall="/recipes/"/>
+    </div>
   );
 }
 
