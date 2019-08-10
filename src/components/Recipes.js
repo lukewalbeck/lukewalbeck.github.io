@@ -1,0 +1,94 @@
+import React from 'react';
+import API from '../utils/API';
+import { Card, Button, Modal } from 'react-bootstrap';
+class Recipes extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            recipe: [],
+            apiCall: props.apiCall
+        };
+    }
+    render() {
+        const { recipe } = this.state;
+        return (
+            <div>
+                <h2 style={{ margin: '25px' }}>RESTful Blueberry Treats</h2>
+                <div style={flexStyle}>{recipe}</div>
+            </div>
+        );
+    }
+
+    async componentDidMount() {
+        let data = await API.get(this.state.apiCall);
+        let arr = [];
+        data = data.data;
+        for (var i = 0; i < data.length; i++) {
+            arr.push(<Recipe item={data[i]} key={i}></Recipe>);
+        }
+        this.setState({ recipe: arr });
+    }
+}
+
+class Recipe extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            item: props.item,
+            modalShow: false
+        };
+    }
+    
+    render() {
+        const { item, modalShow } = this.state;
+        return (
+            <Card style={{ width: '20rem', margin: '0 auto', marginBottom: '10px' }}>
+                <Card.Img variant="top" src={item.image} />
+                <Card.Body>
+                    <Card.Title>{item.title}</Card.Title>
+                    <Card.Text style={{ overflow: 'auto', maxHeight: '265px' }}>
+                        {item.description}
+                    </Card.Text>
+                    <Button variant="primary" onClick={() => this.setState({modalShow: true})}>
+                        More Information
+                    </Button>
+                    <MyModal show={modalShow} recipe={item} onHide={() => this.setState({modalShow: false})}></MyModal>
+                </Card.Body>
+            </Card>
+        );
+    }
+}
+
+function MyModal(props) {
+    console.log(props.recipe);
+    return (      
+        <Modal
+            {...props}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+        >
+            <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title-vcenter">
+                    {props.recipe.title}
+            </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <p>
+                    {props.recipe.description}
+                </p>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button onClick={props.onHide}>Close</Button>
+            </Modal.Footer>
+        </Modal>
+    );
+}
+
+
+const flexStyle = {
+    display: 'flex'
+};
+
+
+export default Recipes;
