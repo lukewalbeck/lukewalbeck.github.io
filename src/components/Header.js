@@ -13,6 +13,8 @@ class Header extends React.Component {
                             <Nav.Link href="#home">Home</Nav.Link>
                             <Nav.Link href="#projects">Projects</Nav.Link>
                             <Nav.Link href="#food">Food</Nav.Link>
+                            <Nav.Link href="#blog">Blog</Nav.Link>
+                            <Nav.Link href="#contact">Contact</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

@@ -2,6 +2,7 @@ import React from 'react';
 import API from '../utils/API';
 import { Card, Button, Modal } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
+
 class Projects extends React.Component {
     constructor(props) {
         super(props);
@@ -14,7 +15,7 @@ class Projects extends React.Component {
     render() {
         const { project, loaded } = this.state;
         return (
-            <Fade when={loaded}>
+            <Fade ssrFadeout bottom when={loaded}>
                 <div style={{margin: '0 auto', width: '100%' }} id="projects">
                 <h2 style={{ margin: '25px' }}>Projects</h2>
                 <div style={flexStyle}>{project}</div>

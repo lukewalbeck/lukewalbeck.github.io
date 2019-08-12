@@ -15,7 +15,7 @@ class Recipes extends React.Component {
     render() {
         const { recipe, loaded } = this.state;
         return (
-            <Fade when={loaded}>
+            <Fade bottom ssrFadeout when={loaded}>
                 <div style={{margin: '0 auto', width: '100%' }} id="food">
                     <h2 style={{ margin: '25px' }}>Blueberry Treats</h2>
                     <div style={flexStyle}>{recipe}</div>
