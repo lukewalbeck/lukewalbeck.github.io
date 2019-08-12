@@ -4,7 +4,7 @@ import { Jumbotron } from 'react-bootstrap';
 class AboutMe extends React.Component {
     render() {
         return(
-            <div style={centerMe}>
+            <div style={centerMe} id="about">
                 <Jumbotron>
                     <h2>I am an aspiring software developer with interests in Intelligent Health Applications, UX Design, full-stack development, and mobile-systems design.</h2>
                 </Jumbotron>
