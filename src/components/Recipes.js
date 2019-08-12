@@ -13,7 +13,7 @@ class Recipes extends React.Component {
         const { recipe } = this.state;
         return (
             <div>
-                <h2 style={{ margin: '25px' }}>RESTful Blueberry Treats</h2>
+                <h2 style={{ margin: '25px' }}>Blueberry Treats</h2>
                 <div style={flexStyle}>{recipe}</div>
             </div>
         );
@@ -42,11 +42,11 @@ class Recipe extends React.Component {
     render() {
         const { item, modalShow } = this.state;
         return (
-            <Card style={{ width: '20rem', margin: '0 auto', marginBottom: '10px' }}>
+            <Card style={{ maxWidth: '25rem', margin: '0 auto', marginBottom: '10px' }}>
                 <Card.Img variant="top" src={item.image} />
                 <Card.Body>
                     <Card.Title>{item.title}</Card.Title>
-                    <Card.Text style={{ overflow: 'auto', maxHeight: '265px' }}>
+                    <Card.Text style={{ overflow: 'auto', height: '15em'}}>
                         {item.description}
                     </Card.Text>
                     <Button variant="primary" onClick={() => this.setState({modalShow: true})}>
@@ -87,7 +87,8 @@ function MyModal(props) {
 
 
 const flexStyle = {
-    display: 'flex'
+    display: 'flex',
+    flexWrap: 'wrap'
 };
 
 
