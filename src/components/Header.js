@@ -1,5 +1,6 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap'
+import { Navbar, Nav, Button } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Header extends React.Component {
     render() {
@@ -15,6 +16,12 @@ class Header extends React.Component {
                             <Nav.Link href="#food">Food</Nav.Link>
                             <Nav.Link href="#blog">Blog</Nav.Link>
                             <Nav.Link href="#contact">Contact</Nav.Link>
+                            <Nav.Link href="#contact">Resume</Nav.Link>
+                        </Nav>
+                        <Nav>
+                            <Nav.Link  href="https://github.com/lukewalbeck" target="_blank">                            
+                                <Button variant="outline-light"><FontAwesomeIcon icon={['fab', 'github']}/></Button>
+                            </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

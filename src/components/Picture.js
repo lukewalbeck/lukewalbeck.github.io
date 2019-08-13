@@ -6,16 +6,15 @@ class Picture extends React.Component {
     render() {
         return(
             <Fade>
-                <div style={imgStyle}>
-                    <Image src={pic} fluid rounded />
+                <div>
+                    <Image src={pic} style={imgStyle} rounded />
                 </div>
             </Fade>
         );
     }
 }
 let imgStyle = {
-    width: '40%',
-    margin: '0 auto',
-    marginBottom: '0'
+    width: '400px',
+    height: 'auto',
 }
 export default Picture;

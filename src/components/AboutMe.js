@@ -3,6 +3,7 @@ import { Jumbotron } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import Picture from './Picture';
 
+
 class AboutMe extends React.Component {
     render() {
         return(
@@ -12,8 +13,8 @@ class AboutMe extends React.Component {
                         <Picture></Picture>
                     </div>
                     <div>
-                        <Jumbotron>
-                            <h2>I am an aspiring software developer with interests in Intelligent Health Applications, UX Design, full-stack development, and mobile-systems design.</h2>
+                        <Jumbotron style={{marginLeft:'30px'}}>
+                            <h2>Hi there! My name is Lucas Walbeck</h2><br></br><h2>I am an aspiring software developer with interests in Intelligent Health Applications, UX Design, full-stack development, and mobile-systems design.</h2>     
                         </Jumbotron>
                     </div>
                 </Fade>  
@@ -23,8 +24,10 @@ class AboutMe extends React.Component {
 }
 
 const centerMe = {
-    margin: '0 auto',
     marginTop: '10px',
-    display: 'flex'
+    display: 'flex',
+    flexDirection: 'row',
+    marginRight: '10%',
+    marginLeft: '10%'
 };
 export default AboutMe;
