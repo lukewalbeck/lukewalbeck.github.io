@@ -14,7 +14,17 @@ class AboutMe extends React.Component {
                     </div>
                     <div>
                         <Jumbotron style={{marginLeft:'30px'}}>
-                            <h2>Hi there! My name is Lucas Walbeck</h2><br></br><h2>I am an aspiring software developer with interests in Intelligent Health Applications, UX Design, full-stack development, and mobile-systems design.</h2>     
+                            <h2>Hi there! My name is Lucas Walbeck.</h2>
+                            <br></br>
+                            <h2>
+                                I am an aspiring software developer with interests in Intelligent Health Applications, 
+                                UX Design, full-stack development, and mobile-systems design.
+                            </h2>
+                            <br></br>
+                            <h4>
+                                This site is built on a React front-end and Django REST Framework back-end, with my projects,
+                                blog posts, and non-static content generated through the API. Please take a look around!    
+                            </h4>     
                         </Jumbotron>
                     </div>
                 </Fade>  
