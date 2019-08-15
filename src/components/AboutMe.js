@@ -18,7 +18,7 @@ class AboutMe extends React.Component {
                             <br></br>
                             <h2>
                                 I am an aspiring software developer with interests in Intelligent Health Applications, 
-                                UX Design, full-stack development, and mobile-systems design.
+                                UX Design, full-stack development, and mobile-systems design. I am a senior at the University of San Diego.
                             </h2>
                             <br></br>
                             <h4>
