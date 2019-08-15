@@ -3,7 +3,6 @@ import { Jumbotron } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import Picture from './Picture';
 
-
 class AboutMe extends React.Component {
     render() {
         return(
@@ -38,6 +37,6 @@ const centerMe = {
     display: 'flex',
     flexDirection: 'row',
     marginRight: '10%',
-    marginLeft: '10%'
+    marginLeft: '10%',
 };
 export default AboutMe;
