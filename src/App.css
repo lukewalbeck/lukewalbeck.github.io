@@ -2,15 +2,25 @@
   #about {
       display: flex;
       flex-wrap: wrap;
+      margin-left: 3%!important;
+      margin-right: 3%!important;
   }
   #about div {
       padding: 10px;
-      margin: 0 auto;
+      margin: 0 auto!important;
+  }
+  #about img {
+      max-width: 300px!important;
+  }
+
+}
+@media only screen and (max-width: 575px) {
+  #skills .container {
+    margin-left: 10px!important;
+  }
+  #skills > div > div > div > div.col-3 {
+    flex: none;
+    max-width: none;
   }
 }
 
-@media only screen and (max-width: 916px) {
-  .card {
-    margin: 0 auto!important;
-  }
-}

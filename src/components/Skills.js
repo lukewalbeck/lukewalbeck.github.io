@@ -19,10 +19,10 @@ class Skills extends React.Component {
     render() {
         const { pythonProgress, webProgress, cProgress, dbProgress } = this.state;
         return(
-            <div style={{margin: '0 auto', width: '100%' }} id="experience">
+            <div style={{margin: '0 auto', width: '100%' }} id="skills">
                 <Fade>
                 <h2 style={{ margin: '25px' }}>Skills</h2>
-                <Container>
+                <Container style={{margin: '25px'}}>
                     <Row style={{alignItems: 'center'}}>
                         <Col xs={3}><h4>Python / Java / C#</h4></Col>
                         <Col sm={8}><ProgressBar now={pythonProgress} label={'Experienced'} /></Col>    

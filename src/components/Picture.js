@@ -14,7 +14,7 @@ class Picture extends React.Component {
     }
 }
 let imgStyle = {
-    width: '400px',
+    maxWidth: '400px',
     height: 'auto',
 }
 export default Picture;

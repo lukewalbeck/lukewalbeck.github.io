@@ -83,7 +83,6 @@ const popover = (
 );
 
 function MyModal(props) {
-    console.log(props.recipe);
     return (      
         <Modal
             {...props}
