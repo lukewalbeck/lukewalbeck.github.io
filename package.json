@@ -21,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,7 +49,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lukewalbeck/reactsturant/issues"
+    "url": "https://github.com/lukewalbeck/lukewalbeck.github.io/issues"
   },
-  "homepage": "https://github.com/lukewalbeck/reactsturant#readme"
+  "homepage": "https://lukewalbeck.github.io/"
 }
