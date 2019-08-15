@@ -17,6 +17,7 @@
 @media only screen and (max-width: 575px) {
   #skills .container {
     margin-left: 10px!important;
+    width: auto;
   }
   #skills > div > div > div > div.col-3 {
     flex: none;
