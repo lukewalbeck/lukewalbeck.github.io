@@ -15,8 +15,8 @@ class Projects extends React.Component {
     render() {
         const { project, loaded } = this.state;
         return (
-            <Fade ssrFadeout when={loaded}>
-                <div style={{ width: '100%' }} id="projects">
+            <Fade when={loaded}>
+                <div style={{ width: '100%' }}>
                 <h2 style={{ margin: '25px' }}>
                         <OverlayTrigger trigger="hover" placement="right" overlay={popover}>
                             <span>Projects</span>
@@ -39,6 +39,10 @@ class Projects extends React.Component {
             arr.push(<Project item={data[i]} key={i}></Project>);
         }
         this.setState({ project: arr, loaded: true });
+    }
+
+    componentWillUnmount() {
+        this.loaded = false;
     }
 }
 

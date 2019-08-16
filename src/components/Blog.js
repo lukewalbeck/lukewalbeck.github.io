@@ -29,9 +29,13 @@ class Blog extends React.Component {
         let arr = [];
         data = data.data;
         for (var i = 0; i < data.length; i++) {
-            arr.push(<Post item={data[i]} key={i}></Post>);
+            arr.push(<Post item={data[i]} key={data.id}></Post>);
         }
         this.setState({ posts: arr, loaded: true }); 
+    }
+
+    componentWillUnmount() {
+        this.loaded = false;
     }
 }
 export default Blog;

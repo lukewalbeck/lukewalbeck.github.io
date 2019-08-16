@@ -14,6 +14,7 @@ const routing = (
             <Header/>
             <Switch>
                 <Route exact path="/" component={Home}></Route>
+                <Route path="/home" component={Home}></Route>
                 <Route path="/projects" component={() => <Projects apiCall="/projects/"/>}></Route>
                 <Route path="/blog" component={() => <Blog apiCall="/posts/"/>}></Route>
             </Switch>      

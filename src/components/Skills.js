@@ -6,7 +6,6 @@ import Fade from 'react-reveal';
 class Skills extends React.Component {
     constructor(props){
         super(props);
-
         this.state = {
             pythonProgress: 0,
             webProgress: 0,
@@ -45,8 +44,8 @@ class Skills extends React.Component {
         );
     }
 
-    async componentDidMount() {
-        setInterval(() => {
+    componentDidMount() {
+        this.intervalID = setInterval(() => {
             this.setState({
                 pythonProgress: 90,
                 webProgress: 75,
@@ -56,5 +55,8 @@ class Skills extends React.Component {
         }, 1000)
     }
 
+    componentWillUnmount() {
+        clearInterval(this.intervalID);
+    }
 }
 export default Skills;
