@@ -7,7 +7,7 @@ class Header extends React.Component {
         return (
             <div id="home">
                 <Navbar bg="dark" variant="dark" expand="lg">
-                    <Navbar.Brand href="#home">Lucas Walbeck</Navbar.Brand>
+                    <Navbar.Brand href="/">Lucas Walbeck</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">

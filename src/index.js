@@ -6,6 +6,7 @@ import Header from './components/Header';
 import * as serviceWorker from './serviceWorker';
 import { Route, HashRouter as Router, Switch } from 'react-router-dom'
 import Blog from './components/Blog';
+import Projects from './components/Projects';
 
 const routing = (
     <Router basename="/">
@@ -13,6 +14,7 @@ const routing = (
             <Header/>
             <Switch>
                 <Route exact path="/" component={Home}></Route>
+                <Route path="/projects" component={() => <Projects apiCall="/projects/"/>}></Route>
                 <Route path="/blog" component={() => <Blog apiCall="/posts/"/>}></Route>
             </Switch>      
         </div>
