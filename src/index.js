@@ -4,11 +4,11 @@ import './index.css';
 import Home from './Home';
 import Header from './components/Header';
 import * as serviceWorker from './serviceWorker';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
+import { Route, HashRouter as Router, Switch } from 'react-router-dom'
 import Blog from './components/Blog';
 
 const routing = (
-    <Router>
+    <Router basename="/">
         <div>
             <Header/>
             <Switch>
