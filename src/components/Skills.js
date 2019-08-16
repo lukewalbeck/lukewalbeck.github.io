@@ -45,18 +45,33 @@ class Skills extends React.Component {
     }
 
     componentDidMount() {
-        this.intervalID = setInterval(() => {
+        this.pythonInterval = setInterval(() => {
             this.setState({
-                pythonProgress: 90,
-                webProgress: 75,
-                cProgress: 60,
-                dbProgress: 50,
+                pythonProgress: 90
             })
-        }, 1000)
+        }, 400)
+        this.webInterval = setInterval(() => {
+            this.setState({
+                webProgress: 75
+            })
+        }, 800)
+        this.cInterval = setInterval(() => {
+            this.setState({
+                cProgress: 60
+            })
+        }, 1200)
+        this.dbInterval = setInterval(() => {
+            this.setState({
+                dbProgress: 50
+            })
+        }, 1600)
     }
 
     componentWillUnmount() {
-        clearInterval(this.intervalID);
+        clearInterval(this.pythonInterval);
+        clearInterval(this.webInterval);
+        clearInterval(this.cInterval);
+        clearInterval(this.dbInterval);
     }
 }
 export default Skills;

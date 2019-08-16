@@ -1,7 +1,8 @@
 import React from 'react';
 import API from '../utils/API';
-import { Card, Button, Modal, OverlayTrigger, Popover } from 'react-bootstrap';
+import { Card, Button, OverlayTrigger, Popover } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Projects extends React.Component {
     constructor(props) {
@@ -51,24 +52,20 @@ class Project extends React.Component {
         super(props);
         this.state = {
             item: props.item,
-            modalShow: false
         };
     }
     
     render() {
-        const { item, modalShow } = this.state;
+        const { item } = this.state;
         return (
             <Card style={{ maxWidth: '25rem', margin:'0 25px 10px 25px' }}>
                 <Card.Img variant="top" src={item.image} />
                 <Card.Body>
                     <Card.Title>{item.title}</Card.Title>
-                    <Card.Text style={{ overflow: 'auto', height: '15em'}}>
+                    <Card.Text style={{ overflow: 'auto', height: '12em'}}>
                         {item.description}
                     </Card.Text>
-                    <Button variant="primary" onClick={() => this.setState({modalShow: true})}>
-                        More Information
-                    </Button>
-                    <MyModal show={modalShow} recipe={item} onHide={() => this.setState({modalShow: false})}></MyModal>
+                    <Button variant="outline-primary"><FontAwesomeIcon icon={['fab', 'github']}/></Button>
                 </Card.Body>
             </Card>
         );
@@ -86,30 +83,7 @@ const popover = (
     </Popover>
 );
 
-function MyModal(props) {
-    return (      
-        <Modal
-            {...props}
-            size="lg"
-            aria-labelledby="contained-modal-title-vcenter"
-            centered
-        >
-            <Modal.Header closeButton>
-                <Modal.Title id="contained-modal-title-vcenter">
-                    {props.recipe.title}
-            </Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <p>
-                    {props.recipe.description}
-                </p>
-            </Modal.Body>
-            <Modal.Footer>
-                <Button onClick={props.onHide}>Close</Button>
-            </Modal.Footer>
-        </Modal>
-    );
-}
+
 
 
 const flexStyle = {

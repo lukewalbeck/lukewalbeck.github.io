@@ -29,7 +29,7 @@ class Blog extends React.Component {
         let arr = [];
         data = data.data;
         for (var i = 0; i < data.length; i++) {
-            arr.push(<Post item={data[i]} key={data.id}></Post>);
+            arr.push(<Post item={data[i]} key={i}></Post>);
         }
         this.setState({ posts: arr, loaded: true }); 
     }
@@ -50,16 +50,18 @@ class Post extends React.Component {
 
     render() {
         const { post } = this.state;
+        var date = new Date(post.updated_at);
+        date = date.toLocaleDateString();
         return(
             <Card style={{ maxWidth: '25rem', margin:'0 25px 10px 25px' }}>
                 <Card.Img variant="top" src={post.image} />
                 <Card.Body>
-                    <Card.Title>{post.title} - {post.updated_at.split("T")[0]}</Card.Title>
+                    <Card.Title>{post.title} - {date}</Card.Title>
                     <Card.Text style={{ overflow: 'auto', height: '10em'}}>
                         {post.content}
                     </Card.Text>
-                    <Button variant="primary">
-                        More Information
+                    <Button variant="outline-primary">
+                        Read More
                     </Button>
 
                 </Card.Body>
