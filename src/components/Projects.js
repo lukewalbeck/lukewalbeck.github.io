@@ -49,14 +49,14 @@ class Project extends React.Component {
     render() {
         const { item } = this.state;
         return (
-            <Card style={{ maxWidth: '25rem', margin:'0 25px 10px 25px' }}>
+            <Card style={{ maxWidth: '23rem', margin:'0 10px 10px 25px' }}>
                 <Card.Img variant="top" src={item.image} />
                 <Card.Body>
                     <Card.Title>{item.title}</Card.Title>
                     <Card.Text style={{ overflow: 'auto', height: '12em'}}>
                         {item.description}
                     </Card.Text>
-                    <Button variant="outline-primary"><FontAwesomeIcon icon={['fab', 'github']}/></Button>
+                    <Button variant="outline-primary" href={item.github} target="_blank"><FontAwesomeIcon icon={['fab', 'github']}/></Button>
                 </Card.Body>
             </Card>
         );

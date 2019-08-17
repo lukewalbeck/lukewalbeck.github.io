@@ -19,7 +19,7 @@ class AboutMe extends React.Component {
                                 I am an aspiring software developer with interests in Intelligent Health Applications, 
                                 UX Design, full-stack development, and mobile-systems design. I am a senior at the University of San Diego.
                             </h2>
-                            <br></br>
+                            <hr></hr>
                             <h4>
                                 This site is built on a React front-end and Django REST Framework back-end, with my projects,
                                 blog posts, and non-static content generated through the API. Please take a look around!    

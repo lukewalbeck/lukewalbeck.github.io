@@ -12,7 +12,10 @@ class ProjectJump extends React.Component {
                     <hr/>
                     <p>
                         Here are a list of my projects that I have worked on or are still working on,
-                        with their individual github links. This project data is generated from the Django
+                        with their individual github links. 
+                    </p>
+                    <p>    
+                        These projects' inforamtion is generated from the Django
                         REST back-end that I have been developing, so it should be the most up-to-date information
                         regarding my showcase of projects.
                     </p>
