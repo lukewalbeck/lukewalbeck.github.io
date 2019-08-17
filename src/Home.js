@@ -17,6 +17,9 @@ class Home extends React.Component {
       <div>
         <AboutMe></AboutMe>
         <Skills></Skills>
+        <h2 style={{ margin: '25px' }}>
+            Projects
+        </h2>
         <Projects apiCall="/projects/"/>
         <Blog apiCall="/posts/"/>
       </div>

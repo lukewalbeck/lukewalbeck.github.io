@@ -15,12 +15,15 @@ class Blog extends React.Component {
     render() {
         const { posts, loaded } = this.state;
         return(
-            <Fade when={loaded}>
-                <div>
-                    <h2 style={{margin: '25px'}}>Blog</h2>
-                    <div>{posts}</div>
-                </div>
-            </Fade>
+            <div>
+                {!loaded && <h3>Loading Posts...</h3>}
+                <Fade when={loaded}>
+                    <div>
+                        <h2 style={{margin: '25px'}}>Blog</h2>
+                        <div>{posts}</div>
+                    </div>
+                </Fade>
+            </div>
         );
     }
 
@@ -31,7 +34,7 @@ class Blog extends React.Component {
         for (var i = 0; i < data.length; i++) {
             arr.push(<Post item={data[i]} key={i}></Post>);
         }
-        this.setState({ posts: arr, loaded: true }); 
+        this.setState({ posts: arr, loaded: true });
     }
 
     componentWillUnmount() {

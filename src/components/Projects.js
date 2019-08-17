@@ -1,6 +1,6 @@
 import React from 'react';
 import API from '../utils/API';
-import { Card, Button, OverlayTrigger, Popover } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -16,19 +16,14 @@ class Projects extends React.Component {
     render() {
         const { project, loaded } = this.state;
         return (
-            <Fade when={loaded}>
-                <div style={{ width: '100%' }}>
-                <h2 style={{ margin: '25px' }}>
-                        <OverlayTrigger trigger="hover" placement="right" overlay={popover}>
-                            <span>Projects</span>
-                        </OverlayTrigger>
-                    </h2>
-
-                    <div style={flexStyle}>{project}</div>
-
-                
-                </div>
-            </Fade>          
+            <div>
+                {!loaded && <h3>Loading Projects...</h3>}
+                <Fade when={loaded}>
+                    <div style={{ width: '100%' }}>
+                        <div style={flexStyle}>{project}</div>
+                    </div>
+                </Fade>
+            </div>
         );
     }
 
@@ -41,10 +36,6 @@ class Projects extends React.Component {
         }
         this.setState({ project: arr, loaded: true });
     }
-
-    componentWillUnmount() {
-        this.loaded = false;
-    }
 }
 
 class Project extends React.Component {
@@ -54,7 +45,7 @@ class Project extends React.Component {
             item: props.item,
         };
     }
-    
+
     render() {
         const { item } = this.state;
         return (
@@ -71,19 +62,6 @@ class Project extends React.Component {
         );
     }
 }
-
-const popover = (
-    <Popover>
-        <Popover.Title as="h3">REST API Call!</Popover.Title>
-        <Popover.Content>
-            This content is generated from a Django REST Framework project that 
-            I have built, utilizing a model so that I can add, edit, and remove 
-            projects as the year progresses!
-        </Popover.Content>
-    </Popover>
-);
-
-
 
 
 const flexStyle = {
