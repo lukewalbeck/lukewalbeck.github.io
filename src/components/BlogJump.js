@@ -30,7 +30,7 @@ class BlogJump extends React.Component {
                         regarding my blog posts.
                     </p>
                 </Jumbotron>
-                <div style={{margin:'25px'}}>
+                <div style={{margin:'25px'}} id="mediaContainer">
                     {!loaded && <h3>Loading Posts...</h3>}
                     <Fade when={loaded}>
                         <div>{posts}</div>
@@ -65,7 +65,7 @@ class BlogEntry extends React.Component {
         var date = new Date(post.updated_at);
         date = date.toLocaleDateString();
         return(
-            <Media>
+            <Media style={mediaStyle}>
                 <img
                 width={350}
                 className="mr-3"
@@ -80,6 +80,10 @@ class BlogEntry extends React.Component {
             </Media>
         );
     }
+}
+let mediaStyle = {
+    display: 'flex',
+    flexWrap: 'wrap',
 }
 
 export default BlogJump;

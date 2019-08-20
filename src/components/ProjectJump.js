@@ -15,7 +15,7 @@ class ProjectJump extends React.Component {
                         with their individual github links. 
                     </p>
                     <p>    
-                        These projects' inforamtion is generated from the Django
+                        This inforamtion is generated from the Django
                         REST back-end that I have been developing, so it should be the most up-to-date information
                         regarding my showcase of projects.
                     </p>
