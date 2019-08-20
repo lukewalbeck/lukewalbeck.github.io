@@ -3,7 +3,7 @@ import API from '../utils/API';
 import Fade from 'react-reveal/Fade'
 import { Card, Button } from 'react-bootstrap';
 
-class Blog extends React.Component {
+class BlogCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -41,7 +41,7 @@ class Blog extends React.Component {
         this.loaded = false;
     }
 }
-export default Blog;
+export default BlogCard;
 
 class Post extends React.Component {
     constructor(props) {
