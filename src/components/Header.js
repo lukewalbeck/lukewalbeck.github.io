@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import resume from '../media/Resume81819.pdf'
 
 class Header extends React.Component {
     render() {
@@ -14,7 +15,7 @@ class Header extends React.Component {
                             <Nav.Link href="#home">Home</Nav.Link>
                             <Nav.Link href="#projects">Projects</Nav.Link>
                             <Nav.Link href="#blog">Blog</Nav.Link>
-                            <Nav.Link href="#resume">Resume</Nav.Link>
+                            <Nav.Link href={resume} target="_blank">Resume</Nav.Link>
                         </Nav>
                         <Nav>
                             <Nav.Link  href="https://github.com/lukewalbeck" target="_blank">                            
