@@ -28,7 +28,8 @@ class Projects extends React.Component {
     }
 
     async componentDidMount() {
-        let data = await API.get(this.state.apiCall);
+        let config = {'Authorization': 'Api-Key RYiV1aLG.LsqIQoRhrytrhPrJox96fWG3kSR8sCb3'}
+        let data = await API.get(this.state.apiCall, {headers: config});
         let arr = [];
         data = data.data;
         for (var i = 0; i < data.length; i++) {
