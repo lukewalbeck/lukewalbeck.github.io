@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import resume from '../media/Resume81819.pdf'
+import resume from '../media/LukeWalbeckResume.pdf'
 
 class Header extends React.Component {
     render() {
