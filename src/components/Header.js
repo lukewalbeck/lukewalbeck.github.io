@@ -21,6 +21,9 @@ class Header extends React.Component {
                             <Nav.Link  href="https://github.com/lukewalbeck" target="_blank">                            
                                 <Button variant="outline-light"><FontAwesomeIcon icon={['fab', 'github']}/></Button>
                             </Nav.Link>
+                            <Nav.Link href="https://www.linkedin.com/in/lucas-walbeck/" target="_blank">
+                                <Button variant="outline-light"><FontAwesomeIcon icon={['fab', 'linkedin-in']}/></Button>
+                            </Nav.Link>
                             <Nav.Link href="mailto:lukewalbeck@gmail.com" target="_blank">
                             <Button variant="outline-light"><FontAwesomeIcon icon='envelope'/></Button>
                             </Nav.Link>
