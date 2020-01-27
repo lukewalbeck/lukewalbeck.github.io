@@ -1,6 +1,8 @@
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
-import { Fade } from 'react-reveal'
+import { Fade } from 'react-reveal';
+import { Parallax } from 'react-parallax';
+import usdImage from '../media/USD.jpg';
 
 class NewAbout extends React.Component {
     constructor(props) {
@@ -16,15 +18,15 @@ class NewAbout extends React.Component {
         const { name, fadeBool } = this.state;
         return(
             <div>
-                <Jumbotron style={{'margin-bottom': 0, 'min-height': '220px', 'padding-bottom': 0}}>
+                <Jumbotron id="Hello">
                     <h1>My name is Lucas Walbeck and I am a <Fade in={fadeBool}><div style={{display: 'inline'}}>{name}</div></Fade></h1>
                     <br></br>
                 </Jumbotron>
-                <Jumbotron id="USD">
+                <Parallax bgImage={usdImage} strength={500}>
                     <Fade big>
-                        <h1>I'm currently in my senior year at the University of San Diego pursuing a B.S. in Computer Science and a minor in Finance.</h1>
+                        <h1 id="USD">I'm currently in my senior year at the University of San Diego pursuing a B.S. in Computer Science and a minor in Finance.</h1>
                     </Fade>
-                </Jumbotron>
+                </Parallax>
                 <Jumbotron>
                     <Fade bottom>
                         <h3>This is my personal website used for showcasing my personal projects and experiences. Feel free to contact me through my email, LinkedIn, or just explore my site!</h3>
