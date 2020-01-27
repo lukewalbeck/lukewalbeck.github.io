@@ -4,7 +4,7 @@ import './index.css';
 import Home from './Home';
 import Header from './components/Header';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import ProjectJump from './components/ProjectJump';
 import BlogJump from './components/BlogJump';
 

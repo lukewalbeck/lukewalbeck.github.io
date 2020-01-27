@@ -8,13 +8,13 @@ class Header extends React.Component {
         return (
             <div id="home">
                 <Navbar bg="dark" variant="dark" expand="lg">
-                    <Navbar.Brand href="/">Lucas Walbeck</Navbar.Brand>
+                    <Navbar.Brand href="#home">Lucas Walbeck</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="projects">Projects</Nav.Link>
-                            <Nav.Link href="blog">Blog</Nav.Link>
+                            <Nav.Link href="#home">Home</Nav.Link>
+                            <Nav.Link href="#projects">Projects</Nav.Link>
+                            <Nav.Link href="#blog">Blog</Nav.Link>
                             <Nav.Link href={resume} target="_blank">Resume</Nav.Link>
                         </Nav>
                         <Nav>
