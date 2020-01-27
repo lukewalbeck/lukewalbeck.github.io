@@ -31,3 +31,19 @@
   }
 }
 
+#USD {
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  padding-left: 45%;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  background-image: url("./media/USD.jpg");
+
+
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  background-size: 125%;
+}
+

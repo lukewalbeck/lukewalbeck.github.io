@@ -17,8 +17,9 @@ class Projects extends React.Component {
         const { project, loaded } = this.state;
         return (
             <div>
-                {!loaded && <h3>Loading Projects...</h3>}
+                {!loaded && <h2 style={{margin: '25px'}}>Loading Projects...</h2>}
                 <Fade when={loaded}>
+                    <h2 style={{ margin: '25px' }}>Projects</h2>
                     <div style={{ width: '100%' }}>
                         <div style={flexStyle}>{project}</div>
                     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import AboutMe from './components/AboutMe';
+import NewAbout from './components/NewAbout';
+//import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import './App.css';
@@ -15,11 +16,8 @@ class Home extends React.Component {
   render() {
     return(
       <div>
-        <AboutMe></AboutMe>
+        <NewAbout></NewAbout>
         <Skills></Skills>
-        <h2 style={{ margin: '25px' }}>
-            Projects
-        </h2>
         <Projects apiCall="/projects/"/>
         <BlogCard apiCall="/posts/"/>
       </div>
