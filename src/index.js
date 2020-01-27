@@ -7,11 +7,9 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ProjectJump from './components/ProjectJump';
 import BlogJump from './components/BlogJump';
-import HttpsRedirect from 'react-https-redirect';
 
 
 const routing = (
-    <HttpsRedirect>
         <Router>
             <Header/>
             <Switch>
@@ -21,7 +19,6 @@ const routing = (
                 <Route path="/blog" component={() => <BlogJump apiCall='/posts/'/>}></Route>
             </Switch>
         </Router>
-    </HttpsRedirect>
 )
 
 
