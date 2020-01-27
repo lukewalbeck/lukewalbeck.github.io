@@ -7,18 +7,21 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ProjectJump from './components/ProjectJump';
 import BlogJump from './components/BlogJump';
+import HttpsRedirect from 'react-https-redirect';
 
 
 const routing = (
-    <Router>
-        <Header/>
-        <Switch>
-            <Route exact path="/" component={Home}></Route>
-            <Route path="/home" component={Home}></Route>
-            <Route path="/projects" component={ProjectJump}></Route>
-            <Route path="/blog" component={() => <BlogJump apiCall='/posts/'/>}></Route>
-        </Switch>
-    </Router>
+    <HttpsRedirect>
+        <Router>
+            <Header/>
+            <Switch>
+                <Route exact path="/" component={Home}></Route>
+                <Route path="/home" component={Home}></Route>
+                <Route path="/projects" component={ProjectJump}></Route>
+                <Route path="/blog" component={() => <BlogJump apiCall='/posts/'/>}></Route>
+            </Switch>
+        </Router>
+    </HttpsRedirect>
 )
 
 
