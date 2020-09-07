@@ -3,12 +3,13 @@ import { Jumbotron } from 'react-bootstrap';
 import { Fade } from 'react-reveal';
 import { Parallax } from 'react-parallax';
 import usdImage from '../media/USD.jpg';
+import bayImage from '../media/bay.jpg'
 
 class NewAbout extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            names: ['student-athlete.', 'software developer.', 'teammate.', 'leader.'],
+            names: ['student-athlete.', 'software engineer.', 'teammate.', 'leader.'],
             name: '',
             tick: 0,
             fadeBool: true,
@@ -19,12 +20,17 @@ class NewAbout extends React.Component {
         return(
             <div>
                 <Jumbotron id="Hello">
-                    <h1>My name is Lucas Walbeck and I am a <Fade in={fadeBool}><div style={{display: 'inline'}}>{name}</div></Fade></h1>
+                    <h1>My name is Luke Walbeck and I am a <Fade in={fadeBool}><div style={{display: 'inline'}}>{name}</div></Fade></h1>
                     <br></br>
                 </Jumbotron>
+                <Parallax bgImage={bayImage} strength={500}>
+                    <Fade big>
+                        <h1 id="USD">I'm currently a software engineer at Cisco residing in the Bay Area.</h1>
+                    </Fade>
+                </Parallax>
                 <Parallax bgImage={usdImage} strength={500}>
                     <Fade big>
-                        <h1 id="USD">I'm currently in my senior year at the University of San Diego pursuing a B.S. in Computer Science and a minor in Finance.</h1>
+                        <h1 id="USD">I graduated in May 2020 from the University of San Diego with a B.S. in Computer Science and a minor in Finance.</h1>
                     </Fade>
                 </Parallax>
                 <Jumbotron>
